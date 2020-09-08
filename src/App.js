@@ -21,8 +21,8 @@ const config = {
   startVelocity: "30",
   elementCount: "159",
   dragFriction: "0.07",
-  duration: "2570",
-  stagger: "5",
+  duration: "1500",
+  stagger: "0",
   width: "14px",
   height: "10px",
   perspective: "797px",
@@ -70,7 +70,7 @@ function App() {
     <React.Fragment>
       <div className="App mt-3 md:mt-0 object-cover overflow-hidden">
         <h1 className="--gradient text-2xl md:text-5xl font-bold leading-tight text-indigo-800">
-          Katakana
+          Hiragana
         </h1>
         <div className="container m-auto">
           <form onSubmit={handleSubmit(onSubmit)}>
@@ -123,7 +123,7 @@ function App() {
               onClick={handleSpeakerButtonClick}
               Icon={<IonIcon name="megaphone-outline" styles="align-middle" />}
               title="Start Listening!"
-              styles="bg-indigo-500 text-white py-1 px-1 mt-2 md:mt-0 md:px-3 md:py-1 shadow-lg hover:shadow-xs rounded-full hover:bg-indigo-700 cursor-pointer focus:shadow-outline focus:outline-none"
+              styles="bg-pink-500 text-white py-1 px-1 mt-2 md:mt-0 md:px-3 md:py-1 shadow-lg hover:shadow-xs rounded-full hover:bg-pink-700 cursor-pointer focus:shadow-outline focus:outline-none"
             />
             <Confetti active={isSpeakerButtonClick} config={config}></Confetti>
             <Confetti active={showModal} config={config}></Confetti>
@@ -173,7 +173,7 @@ function App() {
         style={{ zIndex: -1 }}
       >
         <p className="italic text-gray-500 text-sm">
-          Katakana - Version 1 <br />
+          Hiragana - Version 1 <br />
           Practice your writing with digital teacher. <br />
         </p>
         <p className="italic text-gray-500 text-xs">
@@ -216,11 +216,11 @@ function App() {
             >
               <div className="bg-white px-4 pt-5 pb-4 sm:p-6 sm:pb-4">
                 <div className="sm:flex sm:items-start">
-                  <div className="mx-auto flex-shrink-0 flex items-center justify-center h-12 w-12 rounded-full bg-green-100 sm:mx-0 sm:h-10 sm:w-10">
+                  <div className="mx-auto flex-shrink-0 flex items-center justify-center h-12 w-12 rounded-full bg-pink-100 sm:mx-0 sm:h-10 sm:w-10">
                     <svg
                       viewBox="0 0 20 20"
                       fill="currentColor"
-                      className="badge-check w-6 h-6 text-green-500"
+                      className="badge-check w-6 h-6 text-pink-500"
                     >
                       <path
                         fillRule="evenodd"
@@ -253,7 +253,7 @@ function App() {
                     type="button"
                     text="Okay"
                     title="Click to see range"
-                    styles="inline-flex justify-center w-full border border-transparent px-1 py-1 md:px-4 md:py-2 bg-green-200 text-green-600 text-base leading-6 font-medium rounded-full hover:text-white hover:bg-green-500 focus:outline-none focus:border-green-700 focus:shadow-outline-green transition ease-out sm:text-sm sm:leading-5"
+                    styles="inline-flex justify-center w-full px-1 py-1 md:px-4 md:py-2 bg-pink-200 text-pink-600 text-base leading-6 font-medium rounded-full hover:text-white hover:bg-pink-500 focus:outline-none focus:border-green-700 focus:shadow-outline-green transition ease-out sm:text-sm sm:leading-5"
                     onClick={handleModalCloseBtnClick}
                   />
                 </span>

@@ -11,7 +11,7 @@ ion-icon {
 }
 
 .--gradient {
-  background: -webkit-linear-gradient(rgb(101, 186, 255), #434190);
+  background: -webkit-linear-gradient(rgba(248, 30, 132, 0.123), #f0035e);
   background-clip: #434190;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
