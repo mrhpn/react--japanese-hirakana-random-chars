@@ -12,6 +12,7 @@ import Label from "./components/label";
 import Select from "./components/select";
 import Button from "./components/button";
 import IonIcon from "./components/ionIcon";
+import Error from "./components/error";
 
 import Confetti from "react-dom-confetti";
 
@@ -34,11 +35,16 @@ function App() {
   const [isSpeakerButtonClick, setIsSpeakerButtonClick] = useState(false);
   const [shuffledItems, setShuffledItems] = useState([]);
   const [showModal, setShowModal] = useState(false);
+  const [isError, setError] = useState(false);
 
   function onSubmit(data) {
     const from = data.from;
     const to = data.to;
     const delay = data.delay;
+
+    if (from <= 0 || to > 46) return setError(true);
+
+    setError(false);
 
     const range = _.range(from, parseInt(to) + 1);
     const shuffledRange = _.shuffle(range);
@@ -99,7 +105,7 @@ function App() {
               id="to"
               name="to"
               registerObj={{ register, rules: { required: "required" } }}
-              placeholder="45"
+              placeholder="46"
             />
 
             <Label
@@ -141,6 +147,7 @@ function App() {
               onClick={handleViewRangeBtnClick}
             />
           </form>
+          {isError && <Error message="Something didn't work! Check Range." />}
           <div className="w-full h-128 mt-3 --center" style={{ zIndex: 99 }}>
             <Scrollbars autoHide autoHideTimeout={1000}>
               {shuffledItems &&
