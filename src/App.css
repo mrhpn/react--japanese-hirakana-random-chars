@@ -31,6 +31,12 @@ ion-icon {
   backdrop-filter: blur(7px);
 }
 
+.active {
+  background-color: #f0035e;
+  color: white;
+  border-radius: 50rem;
+}
+
 @media (prefers-reduced-motion: no-preference) {
   .App-logo {
     animation: App-logo-spin infinite 20s linear;

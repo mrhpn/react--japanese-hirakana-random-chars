@@ -73,7 +73,7 @@ const Practice1 = () => {
 
   return (
     <React.Fragment>
-      <div className="App mt-3 md:mt-0 object-cover overflow-hidden">
+      <div className="App mt-3 md:mt-0 object-cover overflow-hidden ">
         <h1 className="--gradient text-2xl md:text-5xl font-bold leading-tight text-indigo-800">
           Hiragana
         </h1>
