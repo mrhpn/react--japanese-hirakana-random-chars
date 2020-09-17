@@ -18,7 +18,7 @@ const Learning = () => {
 
   return (
     <React.Fragment>
-      <div className="App mt-3 md:mt-0 overflow-hidden ">
+      <div className="App mt-3 md:mt-0 overflow-hidden">
         <h1 className="--gradient text-2xl md:text-5xl font-bold leading-tight text-indigo-800">
           Hiragana
         </h1>
@@ -26,10 +26,7 @@ const Learning = () => {
           Click the item you want to learn. And make sure speaker is on.
         </span>
         <div className="container m-auto ">
-          <div
-            className="relative w-full h-auto m-auto mt-3 --center"
-            style={{ zIndex: 99 }}
-          >
+          <div className="relative w-full h-auto m-auto mt-3 --center">
             {_.range(1, 47).map((item, index) => {
               return (
                 <React.Fragment key={item}>
