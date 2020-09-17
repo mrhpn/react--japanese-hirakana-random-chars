@@ -1,32 +1,32 @@
-import React, { useState } from 'react';
-import { useForm } from 'react-hook-form';
-import _ from 'lodash';
-import playAudio from '../../utils/playAudio';
-import '../../App.css';
-import gallery1 from '../../assets/gallery-1.jpg';
+import React, { useState } from "react";
+import { useForm } from "react-hook-form";
+import _ from "lodash";
+import playAudio from "../../utils/playAudio";
+import "../../App.css";
+import gallery1 from "../../assets/gallery-1.jpg";
 
-import InputNumber from '../../components/common/inputNumber';
+import InputNumber from "../../components/common/inputNumber";
 
-import { Scrollbars } from 'react-custom-scrollbars';
-import Label from '../../components/common/label';
-import Select from '../../components/common/select';
-import Button from '../../components/common/button';
-import IonIcon from '../../components/common/ionIcon';
-import Error from '../../components/common/error';
+import { Scrollbars } from "react-custom-scrollbars";
+import Label from "../../components/common/label";
+import Select from "../../components/common/select";
+import Button from "../../components/common/button";
+import IonIcon from "../../components/common/ionIcon";
+import Error from "../../components/common/error";
 
-import Confetti from 'react-dom-confetti';
+import Confetti from "react-dom-confetti";
 const config = {
-  angle: '87',
+  angle: "87",
   spread: 360,
-  startVelocity: '30',
-  elementCount: '159',
-  dragFriction: '0.07',
-  duration: '1500',
-  stagger: '0',
-  width: '14px',
-  height: '10px',
-  perspective: '797px',
-  colors: ['#a864fd', '#29cdff', '#78ff44', '#ff718d', '#fdff6a'],
+  startVelocity: "30",
+  elementCount: "159",
+  dragFriction: "0.07",
+  duration: "1500",
+  stagger: "0",
+  width: "14px",
+  height: "10px",
+  perspective: "797px",
+  colors: ["#a864fd", "#29cdff", "#78ff44", "#ff718d", "#fdff6a"],
 };
 
 const Practice1 = () => {
@@ -91,7 +91,7 @@ const Practice1 = () => {
             <InputNumber
               id="from"
               name="from"
-              registerObj={{ register, rules: { required: 'required' } }}
+              registerObj={{ register, rules: { required: "required" } }}
               placeholder="1"
             />
 
@@ -103,7 +103,7 @@ const Practice1 = () => {
             <InputNumber
               id="to"
               name="to"
-              registerObj={{ register, rules: { required: 'required' } }}
+              registerObj={{ register, rules: { required: "required" } }}
               placeholder="46"
             />
 
@@ -117,9 +117,9 @@ const Practice1 = () => {
               name="delay"
               registerObj={{ register }}
               options={[
-                { text: '3s', value: '3000' },
-                { text: '5s', value: '5000' },
-                { text: '7s', value: '7000' },
+                { text: "3s", value: "3000" },
+                { text: "5s", value: "5000" },
+                { text: "7s", value: "7000" },
               ]}
             />
 
@@ -246,7 +246,7 @@ const Practice1 = () => {
                       <img
                         alt="All Katakana Characters"
                         src={
-                          window.location.origin + '/data/characters/all.png'
+                          window.location.origin + "/data/characters/all.png"
                         }
                       />
                     </div>

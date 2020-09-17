@@ -1,11 +1,11 @@
-import React, { useState } from 'react';
-import _ from 'lodash';
-import '../../App.css';
-import gallery1 from '../../assets/gallery-1.jpg';
-import playAudio from '../../utils/playAudio';
+import React, { useState } from "react";
+import _ from "lodash";
+import "../../App.css";
+import gallery1 from "../../assets/gallery-1.jpg";
+import playAudio from "../../utils/playAudio";
 
 const Learning = () => {
-  const [gifNumber, setGifNumber] = useState(1);
+  const [gifNumber, setGifNumber] = useState(0);
 
   function handleCharacterClick(name) {
     playAudio(name);
@@ -22,6 +22,9 @@ const Learning = () => {
         <h1 className="--gradient text-2xl md:text-5xl font-bold leading-tight text-indigo-800">
           Hiragana
         </h1>
+        <span className="italic text-gray-600">
+          Click the item you want to learn. And make sure speaker is on.
+        </span>
         <div className="container m-auto ">
           <div
             className="relative w-full h-auto m-auto mt-3 --center"
@@ -43,7 +46,7 @@ const Learning = () => {
             })}
             {/* gif */}
             <div className="absolute top-0">
-              {gifNumber && (
+              {gifNumber > 0 && (
                 <img
                   alt={gifNumber}
                   src={require(`../../../public/data/characters/gifs/${gifNumber}.gif`)}

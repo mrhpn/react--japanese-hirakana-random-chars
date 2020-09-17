@@ -32,9 +32,14 @@ ion-icon {
 }
 
 .active {
-  background-color: #f0035e;
+  background-color: #f14486;
   color: white;
   border-radius: 50rem;
+  box-shadow: 0 3px 15px #c4c4c4;
+}
+
+.active:hover {
+  box-shadow: 0 0 0;
 }
 
 @media (prefers-reduced-motion: no-preference) {
