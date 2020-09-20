@@ -1,7 +1,7 @@
-import React from "react";
-import { Route, Redirect, Switch, NavLink } from "react-router-dom";
-import Learning from "./pages/learning/learning";
-import Practice1 from "./pages/practice1/practice1";
+import React from 'react';
+import { Route, Switch, NavLink } from 'react-router-dom';
+import Learning from './pages/learning/learning';
+import Practice1 from './pages/practice1/practice1';
 
 function App() {
   return (

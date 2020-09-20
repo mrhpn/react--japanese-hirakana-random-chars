@@ -8,9 +8,8 @@ module.exports = {
     screens: {
       sm: '640px',
       md: '768px',
-      mmd: '960px',
-      lg: '1024px',
-      xl: '1280px',
+      lg: '1200px',
+      xl: '1400px',
     },
     colors: {
       transparent: 'transparent',

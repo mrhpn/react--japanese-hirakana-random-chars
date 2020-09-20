@@ -1,8 +1,9 @@
-import React, { useState } from "react";
-import _ from "lodash";
-import "../../App.css";
-import gallery1 from "../../assets/gallery-1.jpg";
-import playAudio from "../../utils/playAudio";
+import React, { useState } from 'react';
+import _ from 'lodash';
+import '../../App.css';
+import gallery1 from '../../assets/gallery-1.jpg';
+import skipCharacter from '../../assets/skip-character.png';
+import playAudio from '../../utils/playAudio';
 
 const Learning = () => {
   const [gifNumber, setGifNumber] = useState(0);
@@ -27,7 +28,23 @@ const Learning = () => {
         </span>
         <div className="container m-auto ">
           <div className="relative w-full h-auto m-auto mt-3 --center">
-            {_.range(1, 47).map((item, index) => {
+            {_.range(1, 52).map((item, index) => {
+              if (
+                item === 37 ||
+                item === 39 ||
+                item === 47 ||
+                item === 48 ||
+                item === 49
+              ) {
+                return (
+                  <img
+                    alt={item}
+                    src={skipCharacter}
+                    className="inline-block border p-2 w-12 xl:w-20"
+                  />
+                );
+              }
+
               return (
                 <React.Fragment key={item}>
                   <img
@@ -35,7 +52,7 @@ const Learning = () => {
                     src={require(`../../../public/data/characters/${item}.png`)}
                     onClick={() => handleCharacterClick(item)}
                     title="Click to listen"
-                    className="inline-block border p-2 w-16 md:w-20 cursor-pointer"
+                    className="inline-block border p-2 w-12 xl:w-20 cursor-pointer"
                   />
                   {(index + 1) % 5 === 0 && <br />}
                 </React.Fragment>
