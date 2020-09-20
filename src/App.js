@@ -13,7 +13,7 @@ function App() {
 
       <div className="fixed top-0 transform translate-y-16 translate-x-16">
         <ul className="list-reset">
-          <li className="mb-3">
+          <li className="relative mb-3">
             <NavLink
               to="/"
               exact
@@ -25,6 +25,18 @@ function App() {
               ></ion-icon>
               Learn
             </NavLink>
+            <li className="absolute inline p-1 px-2 mt-0 ml-5 rounded-full cursor-pointer active">
+              Hiragana
+            </li>
+            <li className="absolute inline p-1 px-2 mt-10 ml-5 border rounded-full cursor-pointer">
+              Dakuon
+            </li>
+            <li className="absolute inline p-1 px-2 mt-20 ml-5 border rounded-full cursor-pointer">
+              Handakuon
+            </li>
+            <li className="absolute inline p-1 px-2 mt-32 ml-5 border rounded-full cursor-pointer">
+              Yoon
+            </li>
           </li>
           <li>
             <NavLink
